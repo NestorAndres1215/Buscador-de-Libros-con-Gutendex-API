@@ -53,7 +53,8 @@ Este es un proyecto sencillo pero funcional que te permite **buscar libros clás
 
 ## 🖼️ Captura de pantalla
 
-![preview](![image](https://github.com/user-attachments/assets/2c8f74be-80cc-4ca5-8510-f21952b88ded)) <!-- Opcional si tienes una imagen -->
+![image](https://github.com/user-attachments/assets/67c3d53e-2540-4611-b077-b936fdf25aca)
+
 
 ---
 
