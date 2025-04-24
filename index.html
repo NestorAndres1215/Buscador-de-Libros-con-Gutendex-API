@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Libros - Gutendex</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-b from-indigo-50 to-gray-100 min-h-screen">
+    <div class="container mx-auto px-6 py-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-10 text-indigo-900 fade-in">📚 Biblioteca Digital</h1>
+        <div class="bg-white p-8 rounded-2xl shadow-xl mb-12 max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+                <input type="text" id="searchInput" placeholder="Busca por título, autor o tema..." class="w-full md:w-1/3 p-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
+                <select id="languageFilter"
+                    class="w-full md:w-1/4 p-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
+                    <option value="">Todos los idiomas</option>
+                    <option value="en">Inglés</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Francés</option>
+                    <option value="de">Alemán</option>
+                </select>
+                <select id="sortFilter" class="w-full md:w-1/4 p-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
+                    <option value="popular">Más populares</option>
+                    <option value="title">Título (A-Z)</option>
+                    <option value="downloads">Más descargados</option>
+                </select>
+                <button onclick="buscarLibros(1)" class="bg-indigo-600 text-white px-8 py-4 rounded-xl hover:bg-indigo-700 transition-colors btn-pulse">
+                    Buscar
+                </button>
+            </div>
+        </div>
+        <div id="resultados" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        <div id="loading" class="hidden">
+            <div class="loading-spinner"></div>
+        </div>
+        <div id="pagination" class="flex justify-center gap-3 mt-12"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
